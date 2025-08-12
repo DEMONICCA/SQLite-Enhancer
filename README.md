@@ -6,16 +6,14 @@
 
 > [!IMPORTANT]
 > Features ✨:
-> 1. Full system database discovery with comprehensive scanning across all Android partitions including `/system`, `/vendor`, `/product`, `/data`, `/storage`, `/cache`, `/metadata`, `/mnt`, and `/apex` for complete database coverage. ✔️
-> 2. Advanced SQLite validation using format header detection to ensure only genuine SQLite databases are processed, preventing errors on false-positive `.db` files. ✔️
-> 3. Enhanced memory optimization with configurable cache sizing (8000 pages), memory-mapped I/O (`mmap_size`), and temporary storage management (`temp_store=MEMORY`) for maximum performance gains. ✔️
-> 4. Intelligent database lock detection with timeout protection to safely skip databases in use while preventing system hangs during optimization processes. ✔️
-> 5. Incremental vacuum implementation replacing full vacuum for faster processing with minimal system impact while maintaining optimization effectiveness. ✔️
-> 6. Real-time optimization tracking with database size measurement showing exact bytes saved per database and comprehensive statistics reporting. ✔️
-> 7. Robust error handling with multiple fallback search methods, timeout protection (60s per database), and detailed per-database status logging for reliability. ✔️
-> 8. Advanced performance tuning with optimized page size (4096 bytes), Write-Ahead Logging mode, normal synchronization, and incremental auto-vacuum for sustained database efficiency. ✔️
-> 9. Comprehensive logging system with timestamps, device information, scan progress, and detailed operation results saved to `/sdcard/Android/DB.log` for monitoring and troubleshooting. ✔️
-> 10. Processing limit safeguards and permission validation to prevent system overload while ensuring safe operation across diverse Android configurations and security contexts. ✔️
+> 1. System-wide database discovery with comprehensive scanning across all Android partitions for complete coverage and optimization. ✔️
+> 2. Advanced SQLite validation using header detection to ensure genuine database processing and prevent false-positive errors. ✔️
+> 3. Enhanced memory optimization with 8000-page cache, memory-mapped I/O, and temporary storage management for maximum performance. ✔️
+> 4. Intelligent lock detection with timeout protection to safely skip active databases while preventing system hangs. ✔️
+> 5. Incremental vacuum implementation for faster processing with minimal system impact and sustained efficiency. ✔️
+> 6. Real-time size tracking showing exact bytes saved per database with comprehensive statistics reporting. ✔️
+> 7. Robust error handling with multiple fallback methods, timeout protection, and detailed status logging for reliability. ✔️
+> 8. Optimized performance tuning with 4KB page size, WAL mode, and incremental auto-vacuum for database efficiency. ✔️
 <hr/>
 
 > [!TIP]
