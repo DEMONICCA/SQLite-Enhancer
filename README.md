@@ -6,14 +6,16 @@
 
 > [!IMPORTANT]
 > Features ✨:
-> 1. Complete database defragmentation and optimization to tidy up structure, rebuild indexes, and update query planner statistics for maximum performance. ✔️
-> 2. Advanced performance tuning with Write-Ahead Logging for better concurrency, optimized sync mode, and configurable cache size (2000 pages) to dramatically improve database I/O operations. ✔️
-> 3. Intelligent auto-optimization feature that performs comprehensive database maintenance including statistics updates and index analysis (requires SQLite 3.18.0+). ✔️
-> 4. Automatic space management system that immediately reclaims unused pages to prevent database bloat and maintain optimal storage efficiency. ✔️
-> 5. Detailed operation tracking with timestamps, device information (model, kernel, SQLite version), and per-database status reports saved to `/sdcard/Android/DB.log`. ✔️
-> 6. Recursive scanning of `/data` and `/sdcard` directories using optimized busybox find to automatically locate all `.db` files for batch processing. ✔️
-> 7. Advanced access control that safely skips locked, corrupted, or permission-restricted databases while continuing optimization of accessible files. ✔️
-> 8. All optimization commands preserve existing data integrity while maximizing performance gains through SQLite's built-in ACID transaction safety. ✔️
+> 1. Full system database discovery with comprehensive scanning across all Android partitions including `/system`, `/vendor`, `/product`, `/data`, `/storage`, `/cache`, `/metadata`, `/mnt`, and `/apex` for complete database coverage. ✔️
+> 2. Advanced SQLite validation using format header detection to ensure only genuine SQLite databases are processed, preventing errors on false-positive `.db` files. ✔️
+> 3. Enhanced memory optimization with configurable cache sizing (8000 pages), memory-mapped I/O (`mmap_size`), and temporary storage management (`temp_store=MEMORY`) for maximum performance gains. ✔️
+> 4. Intelligent database lock detection with timeout protection to safely skip databases in use while preventing system hangs during optimization processes. ✔️
+> 5. Incremental vacuum implementation replacing full vacuum for faster processing with minimal system impact while maintaining optimization effectiveness. ✔️
+> 6. Real-time optimization tracking with database size measurement showing exact bytes saved per database and comprehensive statistics reporting. ✔️
+> 7. Robust error handling with multiple fallback search methods, timeout protection (60s per database), and detailed per-database status logging for reliability. ✔️
+> 8. Advanced performance tuning with optimized page size (4096 bytes), Write-Ahead Logging mode, normal synchronization, and incremental auto-vacuum for sustained database efficiency. ✔️
+> 9. Comprehensive logging system with timestamps, device information, scan progress, and detailed operation results saved to `/sdcard/Android/DB.log` for monitoring and troubleshooting. ✔️
+> 10. Processing limit safeguards and permission validation to prevent system overload while ensuring safe operation across diverse Android configurations and security contexts. ✔️
 <hr/>
 
 > [!TIP]
